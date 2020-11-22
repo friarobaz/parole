@@ -1,0 +1,82 @@
+
+<!doctype html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Questions</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body onclick="test()">
+
+<audio id="myAudio">
+    <source src="win.mp3" type="audio/mpeg">
+</audio>
+<audio id="myAudio2">
+    <source src="winwinwin.mp3" type="audio/mpeg">
+</audio>
+
+<div id="start">
+    <main>
+    <div><h1>Bienvenue!</h1></div>
+    <div style="max-width: 800px">
+        <p>
+            <b>Le but du jeu est de répondre à <span id="WINS_MAX"></span> questions le plus rapidement possible.<br></b>
+            N'hésitez pas à demander autour de vous, d'autres grimpeurs pourront peut être vous aider!<br>
+            Attention vous ne pourrez pas demander de l'aide à la même personne deux fois d'affilée.<br>
+            Indice: Les réponses n'ont jamais d'accent ni de majuscule.<br><br>
+            Pour commencer <span id="choose">choisissez un nom pour votre équipe</span> et cliquez sur une catégorie.
+        </p>
+    </div>
+    <div id="team_box">
+        <div><strong>Nom de l'équipe:</strong></div>
+        <div id="team" class="crazy">Ecrivez quelque chose!</div>
+    </div>
+    <div id="categories">
+        <div class="category disabled">People</div>
+        <div class="category disabled">Sites et montagnes</div>
+        <div class="category disabled">Les amis du CAF</div>
+        <div class="category disabled">Divers</div>
+    </div>
+    </main>
+</div>
+<!-- #################################################################################################################### -->
+<div id="game">
+    <main>
+        <div id="top_left">
+            <div>Parties gagnées: <span id="nb_of_wins">0</span></div>
+            <div>Temps: <span id="timer">0</span></div>
+        </div>
+        <div id="question_box">
+            <div id="question"></div>
+        </div>
+        <div id="main_window">
+            <div id="image"></div>
+            <div id="guess"></div>
+            <div id="bravo">
+                <h1>BRAVO!! <br>Vous avez gagné!!!</h1>
+                <h3>Vous pouvez choisir un autre défi.</h3>
+                <div><h4>Vous avez mis <span id="time"></span>, votre temps a été enregistré.</h4></div>
+                <span onclick="start()" style="text-decoration: underline; cursor: pointer;">recommencer</span>
+            </div>
+        </div>
+        <footer>
+            <center>
+                <div id="next">Appuyez sur "entrer"</div>
+                <div id="infos">Ecris quelque chose!</div>
+            </center>
+        </footer>
+    </main>
+</div>
+<!-- #################################################################################################################### -->
+
+<div id="score_page">
+    <main>
+    <div style="flex: 1;"><h1>Meilleurs temps par catégorie</h1></div>
+    <div style="flex: 3; max-width: 800px">
+        <div id="scores" style="line-height: 50px;"></div>
+    </div>
+    </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
