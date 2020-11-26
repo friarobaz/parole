@@ -228,14 +228,7 @@ $(".category").click(function(){ //start game if category is clicked
     };
 });
 
-setInterval( //update timer every second
-    function() {
-        time = Math.floor((new Date - start_time) / 1000)
-        if (!isNaN(time)){
-            $('#timer').text(time);
-        };
-    }, 1000 //refresh time
-);
+
 
 //listen to keyboard input
 $(document).keydown(function(event){

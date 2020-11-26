@@ -8,23 +8,6 @@ body{
     background-color: #eee;
 }
 
-li{
-    list-style: none;
-}
-
-#game{
-    display: none;
-}
-
-#score_page{
-    display: none;
-}
-
-img{
-    max-height: 500px;
-    max-width: 1000px;
-}
-
 main{
     display: flex;
     flex-direction: column;
@@ -35,137 +18,39 @@ main{
     height: 100vh;
 }
 
-a{
-    color: black;
+.button{
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(150, 178, 236);
+    border: 1px solid black;
+    padding: 3px;
+    width : 200px;
 }
 
-a:visited{
-    color: black;
-}
 
-#guess{ 
-    font-size: 2rem;
-    position: absolute;  
-    left: 50%;                        
-    top: 50%;                        
-    transform: translate(-50%, -50%);
+.name_button {
+    background-color: #0000001e;
     padding: 20px;
-    border-radius: 50px;
-    font-weight: 700;
-    color: white;
+    border-radius: 20px;
+    flex: 0 1;
 }
 
-#top_left{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#question_box {
-    display: flex;
-    max-width: 800px;
-    flex: 1;
-    align-items: flex-end;
-    padding-bottom: 10px;
-}
-
-#question {
-    font-size: 1.1rem;
-    font-family: 'Lato', sans-serif;
-    line-height: 20px;
-}
-
-#main_window{ 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-width: 900px;
-    flex: 1;
-}
-
-#bravo{
-    position: absolute;  
-    left: 50%;                        
-    top: 50%;                        
-    transform: translate(-50%, -50%); 
-}
-
-#team_box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 800px;
-    flex: 1.7;
-}
-
-#team{
-    font-size: 2rem;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 50px;
-    color: white;
-    font-weight: 700;
-}
-
-#categories{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-top: 50px;
-    width: 800px;
-    flex: 2;
-    font-size: 1.3rem;
-}
-
-.category {
-    border: 1px solid gray;
-    padding: 20px;
-    border-radius: 50px;
-}
-
-.category:hover {
+.name_button:hover {
     cursor: pointer;
     background-color: white;
 }
 
-.crazy{
-    border: none;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-    animation: test 5s ease infinite;
+.selected {
+    background-color: rgb(255, 0, 0);
+    pointer-events: none;
+}
+.selected:hover {
+    background-color: rgb(255, 0, 0);
 }
 
-.disabled{
-    color: grey;
-    background-color: #ccc;
-    opacity: 0.3;
-}
-
-.disabled:hover{
-    cursor: not-allowed;
-    background-color: #ccc;
-    opacity: 0.3;
-}
-
-@keyframes test {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-footer {
-    flex: 1;
-    padding-top: 5px;
+.graph {
+    background-color: chartreuse;
+    margin: 10px;
 }
 
 /*
